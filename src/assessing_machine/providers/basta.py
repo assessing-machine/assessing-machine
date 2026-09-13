@@ -14,9 +14,9 @@ from os import environ
 def respond(messages, instructions, **kwargs):
     """
     """
-    api_key = environ.get("DEPSEK_API_KEY")
-    api_base = environ.get("DEPSEK_API_BASE", "https://api.deepseek.com")
-    default_model = environ.get("DEPSEK_DEFAULT_MODEL", "deepseek-v4-pro")
+    api_key = environ.get("BASETEN_API_KEY")
+    api_base = environ.get("BASETEN_API_BASE", "https://inference.baseten.co/v1")
+    default_model = environ.get("BASETEN_DEFAULT_MODEL", "deepseek-ai/DeepSeek-V4-Pro")
 
     instruction = kwargs.get('system_instruction', instructions)
     first_message = [dict(role='system', content=instruction)] if instruction else []
@@ -43,8 +43,8 @@ def respond(messages, instructions, **kwargs):
     # Set the mandatory headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}",
-        "User-Agent": "Name-of-the-Machine"
+        "Authorization": f"Api-Key {api_key}",
+        "User-Agent": "Assessing-Machine"
     }
 
     # Create the Request object

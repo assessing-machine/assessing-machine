@@ -1,17 +1,17 @@
-# Name-of-the-Machine
-A Machine that thinks.
+# Assessing-Machine
+A machine that assesses possible outcomes.
 
 In order to launch it from the command line or as a Python subprocess:
 ```bash
-echo "Theodotos-Alexandreus: Are language models seeking the Truth, machine?" \
-  | uvx name-of-the-machine \
+echo "Theodotos-Alexandreus: What is your assessment, machine?" \
+  | uvx assessing-machine \
     --provider-api-key sk-proj-... \
     --github-token ghp_... 
 ```
 
 Or, with a local pip installation:
 ```bash
-pip install name-of-the-machine
+pip install assessing-machine
 ```
 Set the environment variables:
 ```bash
@@ -20,19 +20,19 @@ export GITHUB_TOKEN="ghp_..."
 ```
 Then:
 ```bash
-name-of-the-machine -a multilogue.txt
+assessing-machine -a multilogue.txt
 ```
 Or:
 ```bash
-name-of-the-machine multilogue.txt > response.txt
+assessing-machine multilogue.txt > response.txt
 ```
 Or:
 ```bash
-name-of-the-machine -a multilogue.txt > tmp && echo tmp > multilogue.txt
+assessing-machine -a multilogue.txt > tmp && echo tmp > multilogue.txt
 ```
 
 Or use it in your Python code:
 ```Python
 # Python
-import name_of_the_machine
+import assessing_machine
 ```
